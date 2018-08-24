@@ -1,5 +1,2 @@
-# Project 3-2: Ray tracer
+# Personal-Projects-2018
 
-http://cs184.eecs.berkeley.edu/article/21
-# Personal-Projects-2018
-# Personal-Projects-2018
