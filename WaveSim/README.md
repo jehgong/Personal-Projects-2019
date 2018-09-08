@@ -1,5 +1,8 @@
+# Fluid Wave Simulator (WaveSim)
+[![WaterSim](https://img.youtube.com/vi/idXoFKszqLw/0.jpg)](https://www.youtube.com/watch?v=idXoFKszqLw)
+
 Technical Approach
-Water Simulation
+
 Realistic computer generated ocean surfaces have been used routinely in film features and were basically ported to video games. The algorithm for these surfaces historically used FFT to craft random noise that evolves over time. These algorithms, however, did not give interactivity between objects and the water’s surface. It would be difficult, for example, to have characters wade through a stream and generate a disturbance that depends directly on the motion that the player controls, as this would cause significant FPS lag using FFT. We used the iWave algorithm, which amounts to a two dimensional convolution and some masking operations. The algorithm is efficient because these operations are suitable for hardware acceleration. We see in the results that the waves generated are affected by the speed of mouse movement.
 
 What makes this part of our project unique is its interactivity and realistic variable response to different interactions (speed of movement). Moving on to implementation, we made a custom water mesh (normal planes have immutable resolution which doesn’t work with our algorithm) and a script to generate it. The script works by figuring out how many vertices we need based on the size of the water and then builds the triangles needed and adds them to an array. The implementation of the iWave algorithm starts precomputing the kernel values and storing them in a lookup table, which we implemented in the second image.
